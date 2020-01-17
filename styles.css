@@ -1,0 +1,15 @@
+.container {
+    margin: auto;
+    width: 900px;
+    text-align:center;
+}
+
+body {
+    background-color:lightgrey;
+}
+
+.navbar {
+    background-color:lightblue;
+    text-align:center;
+}
+
