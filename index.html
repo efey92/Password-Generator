@@ -42,15 +42,18 @@
                     </div>
                     <div id="buttons">
                         <a href="#" onclick="generate();return false;">
-                            <button type="button" id="createbtn" class = "btn btn-primary" onclick = ""><strong>Create Password</strong></button>
+                            <button type="button" id="createbtn" class = "btn btn-primary"><strong>Create Password</strong></button>
                         </a>
-                        <button type="button" id="copybtn" class = "btn btn-success" onclick = ""><strong>Copy to Clipboard</strong></button>
+                        <a href="#" onclick="copyToClipboard();return false;">
+                            <button type="button" id="copybtn" class = "btn btn-success"><strong>Copy to Clipboard</strong></button>
+                        </a>
                     </div>
                     <!-- <div id="length"></div>-->
                 </div>
 
                 <div class="passwords">
-                    <div id="currentPassword"></div>
+                    <input type="text" name="currentPassInput" id="currentPassInput">
+                    <div id="currentPassword" style="display:none;"></div>
                     <div id="previousPasswords"></div>
                 </div>
             </div>

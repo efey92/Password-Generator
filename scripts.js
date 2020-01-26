@@ -34,4 +34,11 @@ function generate() {
   var previousPass = document.getElementById('previousPasswords');
   previousPass.innerHTML = currentPass.innerHTML + '<br>' + previousPass.innerHTML;
   currentPass.innerHTML = passwords;
+  document.getElementById('currentPassInput').value = passwords;
+}
+
+function copyToClipboard() {
+  var currentPass = document.getElementById('currentPassInput');
+  currentPass.select();
+  document.execCommand('copy');
 }
