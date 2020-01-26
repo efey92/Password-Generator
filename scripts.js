@@ -1,40 +1,24 @@
-var char = 'abcdefghijklmnopqrstuvwxyz';
-var num = '0123456789';
-var sym = '!@#$%^&*=-_';
-var cap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var characters = [lowercase, capital, number, symbol]
+var lowercase=["a","b","c","d","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var capital="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var number="0123456789";
+var symbol="!@#$%^&*()-_=+{}[]:;'<>?/,.~`";
+var numberText = document.getElementById("numberText")
+var lowerEl = document.getElementById("lowercase");
+var capitalEl = document.getElementById("capital");
+var numberEl = document.getElementById("number");
+var symbolEl = docuement.getElementById("symbol");
 
-var charNum = document.getElementById("charNum");
-var numBox = document.getElementById("num");
-var symBox = document.getElementById("sym");
-var capBox = document.getElementById("cap");
-var submit = document.getElementById("submit");
-var copy = document.getElementById("copy");
-var newPass = document.getElementById("newPass");
+createBtn.addEventListener("click",function(e)(
 
-var charLength = prompt("How many total characters?");
+  var character = lowercase
+))
+if (#lowercase = true || )
+function generate(length,//checked items)(
+  var passwords = '';
 
-if (charLength < 8 || charLength > 128) {
-  alert("Must have between 8 and 128 characters");
-}
-
-submit.addEventListener("click",function(e){
-    var characters = char;
-    (numBox.checked) ? characters += num : '';
-    (symBox.checked) ? characters += sym : '';
-    (capBox.checked) ? characters += cap : '';
-    newPass.value = password(charNum.value, characters);
-});
-
-function password(l,characters){
-		var pwd = '';
-    for(var i = 0; i<l; i++){
-    		pwd += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return pwd;
-
-}
-
-copy.onclick = function(){
-  newPass.select();
-  document.execCommand("Copy");
-}
+  for(var i = 0; i < length; i++)(
+    passwords += characters.charAt(Math.floor(Math.random() * characters.length));
+  )
+  return passwords;
+)
