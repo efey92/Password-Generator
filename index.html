@@ -8,7 +8,6 @@
     <title>Random Password Generator!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand{-sm|-md|-lg|-xl} bg-warning">
@@ -19,44 +18,46 @@
         <div class="row">
             <div class="col-12">
                 <div class="content">
-                    <label for="customRange2">Amount of Characters in Password:</label>
+                    <label for="number">Amount of Characters in Password:</label>
                     <input type="number" id="numberText" min="8" max="128">
                     <input type="range" class="custom-range" min="8" max="128" id="range">
                 </br>
                     <div class="checks custom-control-inline">
                         <div class="custom-control custom-checkbox" id="lowerCheck">
                             <input type="checkbox" class="custom-control-input" id="lowercase">
-                            <label class="custom-control-label" for="customCheck1">Lowercase Characters</label>   
+                            <label class="custom-control-label" for="lowerCheck">Lowercase Characters</label>
                         </div>
                         <div class="custom-control custom-checkbox" id="numberCheck">
                             <input type="checkbox" class="custom-control-input" id="number">
-                            <label class="custom-control-label" for="customCheck1">Numbers</label>   
+                            <label class="custom-control-label" for="numberCheck">Numbers</label>
                         </div>
                         <div class="custom-control custom-checkbox" id="capitalCheck">
                             <input type="checkbox" class="custom-control-input" id="capital">
-                            <label class="custom-control-label" for="customCheck1">Capitalized Characters</label>   
+                            <label class="custom-control-label" for="capitalCheck">Capitalized Characters</label>
                         </div>
                         <div class="custom-control custom-checkbox" id="symbolCheck">
                             <input type="checkbox" class="custom-control-input" id="symbol">
-                            <label class="custom-control-label" for="customCheck1">Symbols/Special Characters</label>
+                            <label class="custom-control-label" for="symbolCheck">Symbols/Special Characters</label>
                         </div>
                     </div>
                     <div id="buttons">
-                        <button type="button" id="createbtn" class = "btn btn-primary" onclick = ""><strong>Create Password</strong></button>
+                        <a href="#" onclick="generate();return false;">
+                            <button type="button" id="createbtn" class = "btn btn-primary" onclick = ""><strong>Create Password</strong></button>
+                        </a>
                         <button type="button" id="copybtn" class = "btn btn-success" onclick = ""><strong>Copy to Clipboard</strong></button>
                     </div>
                     <!-- <div id="length"></div>-->
                 </div>
 
                 <div class="passwords">
-                    <h4>Previous Passwords</h4>
-                    <!-- <div id="lastNums"></div>-->
+                    <div id="currentPassword"></div>
+                    <div id="previousPasswords"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript"></script>
 </body>
 
 </html>
